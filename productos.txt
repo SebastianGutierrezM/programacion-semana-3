@@ -1,0 +1,10 @@
+P1;Producto1;5749
+P2;Producto2;4221
+P3;Producto3;1151
+P4;Producto4;1788
+P5;Producto5;3505
+P6;Producto6;4631
+P7;Producto7;6729
+P8;Producto8;9750
+P9;Producto9;3109
+P10;Producto10;4741

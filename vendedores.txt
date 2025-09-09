@@ -1,0 +1,5 @@
+CC;3412;Luis;Rodríguez
+TI;4871;Carlos;Gómez
+TI;3110;Carlos;Pérez
+TI;3668;Pedro;Ramírez
+CC;6299;María;Rodríguez
