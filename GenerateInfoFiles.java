@@ -1,26 +1,27 @@
-import java.io.BufferedWriter;
-//Escribir texto en un archivo pero lo hace de forma eficiente, porque no manda cada letra directo al disco, sino que las guarda en un “bloque de memoria” (buffer) y luego las escribe juntas.Eso es como hacer un solo viaje grande en lugar de muchos viajes pequeños.
-import java.io.FileWriter;
-//Es la clase que escribe texto en un archivo.
-import java.io.IOException;
-//Excepción que se lanza si algo sale mal al leer/escribir archivos
-import java.util.Random;
-//Sirve para generar números aleatorios
+import java.io.BufferedWriter; 
+// Escribir texto en un archivo pero lo hace de forma eficiente, porque no manda cada letra directo al disco,
+// sino que las guarda en un “bloque de memoria” (buffer) y luego las escribe juntas. 
 
+import java.io.FileWriter; 
+// Es la clase que escribe texto en un archivo.
+
+import java.io.IOException; 
+// Excepción que se lanza si algo sale mal al leer/escribir archivos
+
+import java.util.Random; 
+// Sirve para generar números aleatorios
 
 public class GenerateInfoFiles {
 
-    // Listas de vendedores con formato TipoDocumento;NúmeroDocumento;NombresVendedor1;ApellidosVendedor1. El arreglo de Strings es una lista 	de palabras
-	
-	//private → solo se usa dentro de esta clase
-	//static → es un dato común a toda la clase 
-	//final → no se puede cambiar
-	
+    // Listas de vendedores con formato TipoDocumento;NúmeroDocumento;Nombres;Apellidos.
+    // private → solo se usa dentro de esta clase
+    // static → es un dato común a toda la clase 
+    // final → no se puede cambiar
     private static final String[] NOMBRES = {"Carlos", "Ana", "Luis", "María", "Sofía", "Pedro"};
     private static final String[] APELLIDOS = {"Gómez", "Rodríguez", "Pérez", "López", "Martínez", "Ramírez"};
     private static final String[] TIPOS_DOC = {"CC", "TI", "CE"};
 
-    //Aquí se crea un objeto de la clase Random. Este objeto sirve para generar números aleatorios.
+    // Aquí se crea un objeto de la clase Random. Este objeto sirve para generar números aleatorios.
     private static final Random random = new Random();
 
     /**
@@ -39,7 +40,7 @@ public class GenerateInfoFiles {
             for (int i = 1; i <= 5; i++) {
                 String tipoDoc = TIPOS_DOC[random.nextInt(TIPOS_DOC.length)];
                 long id = 1000 + random.nextInt(9000);
-                createSalesMenFile(8, tipoDoc, id);
+                createSalesMenFile(8, tipoDoc, id); // 8 ventas inventadas
             }
 
             System.out.println("Archivos generados exitosamente.");
